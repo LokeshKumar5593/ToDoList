@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TodoService } from '../todo.service';
 
 @Component({
   selector: 'app-todoform',
@@ -9,15 +10,16 @@ export class TodoformComponent implements OnInit {
 
   todoInput="";
 
-  constructor() { }
+  constructor(private ts:TodoService) { }
 
   ngOnInit(): void {
   }
   addTask(){
-return "this.i"
+    this.ts.addTodo(this.todoInput)
+    this.todoInput=""
   }
   resetForm(){
-
+    this.todoInput=""
   }
 
 }

@@ -7,9 +7,9 @@
         </div>
     </div>
     <div class="col-3 mt-4">
-        <button class="btn btn-success" (click)="addTask()">Add</button>
+        <button class="btn btn-success" (click)="addTask()" [disabled]=!todoInput.length>Add</button>
     </div>
     <div class="col-3 mt-4">
-        <button class="btn btn-danger" (click)="resetForm()">Reset</button>
+        <button class="btn btn-danger" (click)="resetForm()" [disabled]=!todoInput.length>Reset</button>
     </div>
 </div>
